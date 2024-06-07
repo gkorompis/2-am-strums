@@ -4,7 +4,7 @@ import globalStates from './utils/global';
 import { useWindowSize } from '@uidotdev/usehooks';
 import { useEffect,  useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Home } from './pages';
+import { Home, Musics } from './pages';
 
 function App() {
   const globalContext = globalStates && globalStates.globalContext as any;
@@ -12,6 +12,9 @@ function App() {
   const [windowWidthClass, setWindowWidthClass] = useState("w-pc");
   const windowSize = useWindowSize() as {width: any, height: any};
   const windowWidth = windowSize && windowSize.width;
+  const windowHeight = windowSize && windowSize.height;
+
+  const [screensOffset, setScreensOffset] = useState({} as any);
 
   useEffect(
     ()=>{
@@ -26,15 +29,22 @@ function App() {
     else {
       setWindowWidthClass("w-pc");
     }
-    }, [windowSize, windowWidth]
+    }, [windowSize, windowWidth, windowHeight]
   )
+
+
+
 
   return (
     <>
-     <globalContext.Provider value={{windowSize, windowWidthClass}}>
+     <globalContext.Provider value={{
+        windowSize, windowWidthClass, windowHeight, 
+        screensOffset, setScreensOffset
+      }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home/>} />
+            <Route path="/musics" element={<Musics/>} />
           </Routes>
         </BrowserRouter>
       </globalContext.Provider>

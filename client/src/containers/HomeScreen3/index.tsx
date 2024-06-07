@@ -13,7 +13,7 @@ const HomeScreen3 = () =>{
     return (
         <div className={`${windowWidthClass}-home-screen-3`} >
             <div className="screen screen-title">
-                <p>stream musics</p>
+                <p>stream musics now</p>
             </div>
              <div className="screen screen-content">
                 <div className="img-group">
@@ -29,7 +29,7 @@ const HomeScreen3 = () =>{
                      <p>play on apple music</p>
                 </div>
             </div>
-            {windowWidthClass==="w-pic"?<Screen3Accessory/>:null}
+            {windowWidthClass!=="w-mob"?<Screen3Accessory/>:null}
         </div>
     )
 };

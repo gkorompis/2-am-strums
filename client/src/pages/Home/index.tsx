@@ -10,7 +10,7 @@ const Home = () =>{
             <HomeScreen1/>
             <HomeScreen2/>
             <HomeScreen3/>
-            {/* <AppFooter/> */}
+            <AppFooter/>
         </div>
     )
 };

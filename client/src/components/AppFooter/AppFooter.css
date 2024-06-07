@@ -13,3 +13,39 @@
     font-size: 8vh;
     letter-spacing: 3px;
 }
+
+/* mobile */
+.w-mob-app-footer {
+    height: 20vh;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-mob-app-footer>h1 {
+    font-size: 4vh;
+    letter-spacing: 3px;
+}
+
+/* tab */
+.w-tab-app-footer {
+    height: 20vh;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-tab-app-footer>h1{
+    font-size: 8vh;
+    letter-spacing: 3px;
+}

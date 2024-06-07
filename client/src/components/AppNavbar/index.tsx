@@ -1,13 +1,32 @@
 import "./AppNavbar.css";
 import globalStates from '../../utils/global';
-import { useContext } from "react";
+import { useContext, useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const AppNavbar = () =>{
 
     const context = globalStates && globalStates.globalContext;
     const globalContext:any = useContext(context);
     const windowWidthClass = globalContext && globalContext.windowWidthClass;
+    const screensOffset = globalContext && globalContext.screensOffset;
+    const isOffsetScreen1 = screensOffset && screensOffset.isOffsetScreen1;
 
+    const [isBurgerCollapsed, setIsBurgerCollapsed ] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleSwitchPage = (page:string)=>{
+        const path = page || "/";
+        navigate(path);
+    };
+
+    const handleBurger = () =>{
+        setIsBurgerCollapsed(!isBurgerCollapsed);
+    };
+    
+    useEffect(()=>{
+        console.log('>>>app-navbar', {screensOffset})
+    })
     return(
         <>
             <nav className={`${windowWidthClass}-app-navbar`}>
@@ -21,20 +40,30 @@ const AppNavbar = () =>{
                 <div className="anchors-group-3">
                     {
                         windowWidthClass === "w-mob" ?
-                        <div className="burger">
+                        <div className={ ` burger  ${isOffsetScreen1 ? 'burger-darker' : ''}`}
+                            onClick={handleBurger}
+                        >
                             <div className="burger-layer layer-1"></div>
                             <div className="burger-layer layer-2"></div>
                             <div className="burger-layer layer-3"></div>
                         </div> : 
                         <>
-                            <p>home</p>
-                            <p>musics</p>
-                            <p>stores</p>
-                            <p>contacts</p>
+                            <p onClick={()=>handleSwitchPage("/")}>home</p>
+                            <p onClick={()=>handleSwitchPage("musics")}>musics</p>
+                            <p onClick={()=>handleSwitchPage("/")}>stores</p>
+                            <p onClick={()=>handleSwitchPage("/")}>contacts</p>
                         </>
                     }
-                    
                 </div>
+                
+                   
+                    <div className={`burger-collapsed ${isBurgerCollapsed ? "" : "slide-hide"}`}
+                    onClick={handleBurger}
+                    >
+
+                    </div>
+                
+               
             </nav>
         </>
         

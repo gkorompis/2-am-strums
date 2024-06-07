@@ -2,7 +2,7 @@
     background-color: #343429;
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height: 65vh;
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -74,7 +74,7 @@
 
 .w-mob-home-screen-3>.screen-title {
     color: #fff;
-    font-size: 4vh;
+    font-size: 4.4vh;
     padding-left: 2vw;
     height: 40%;
     z-index: 2;
@@ -83,7 +83,7 @@
 .w-mob-home-screen-3>.screen-title>p {
     font-weight: 600;
     letter-spacing: 1px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -123,37 +123,43 @@
     background-color: #343429;
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
     box-sizing: border-box;
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .w-tab-home-screen-3>.screen {
     width: 100%;
     box-sizing: border-box;
-    /* border: 1px solid orange; */
+    /* border: 1px dashed orange; */
 }
 
 .w-tab-home-screen-3>.screen-title {
-    color: #fff;
-    font-size: 6vh;
+    /* color: #fff;  */
+    font-size: 4vh;
     padding-left: 2vw;
-    height: 40%;
+    height: 20%;
     z-index: 2;
     color: #343429;
+    text-align: center;
 }
 
 .w-tab-home-screen-3>.screen-title>p {
     font-weight: 600;
     letter-spacing: 1px;
-    padding-block: 50px;
+    /* padding-block: 50px; */
+    color: #fff;
 }
 
 .w-tab-home-screen-3>.screen-content {
     height: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .w-tab-home-screen-3>.screen-content>.img-group {
@@ -165,7 +171,7 @@
 }
 
 .w-tab-home-screen-3>.screen-content>.img-group>img {
-    height: 14vh;
+    height: 8vh;
     margin-inline: 5vw;
     cursor: pointer;
 }

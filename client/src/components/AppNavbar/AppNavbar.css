@@ -79,11 +79,19 @@
     position: relative;
 }
 
+
 .w-mob-app-navbar>.anchors-group-3>.burger>.burger-layer {
     position: absolute;
     height: 1.2vh;
     width: 13vw;
     background-color: #343429;
+    transition: 0.5s;
+}
+.w-mob-app-navbar>.anchors-group-3>.burger-darker>.burger-layer {
+    position: absolute;
+    height: 1.2vh;
+    width: 13vw;
+    background-color: #fff;
 }
 .w-mob-app-navbar>.anchors-group-3>.burger>.layer-1{
     top:1vh;
@@ -160,3 +168,16 @@
     top: 4.5vh;
 }
 
+
+
+.burger-collapsed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 25vh;
+    background-color: #000000;
+    transition: 0.5s;
+}
+.slide-hide{
+    transform: translateY(-100%);
+}

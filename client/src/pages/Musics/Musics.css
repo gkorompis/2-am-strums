@@ -1,0 +1,33 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.screen {
+    height: 100vh;
+}
+
+.screen1 {
+    background-color: black;
+}
+
+.screen2 {
+    background-color: lightblue;
+}
+
+.screen3 {
+    background-color: lightgreen;
+}
+
+.squared {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    transition: background-color 0.3s ease;
+}
