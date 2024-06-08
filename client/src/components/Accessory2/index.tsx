@@ -7,6 +7,7 @@ const Accessory2 = () =>{
     const globalContext:any = useContext(context);
     const screensOffset = globalContext && globalContext.screensOffset;
     const isOffset50Screen2 = screensOffset && screensOffset.isOffset50Screen2;
+    
     return(
         <div className="w-pc-accessory-2">
             <div className="wrapper">

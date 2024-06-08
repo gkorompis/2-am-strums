@@ -1,0 +1,77 @@
+.w-pc-musics-screen-2 {
+    width: 100vw;
+    background-color: #343429;
+    display: flex;
+    flex-direction: column;;
+
+}
+.w-pc-musics-screen-2>div{
+    width: 100%;
+    /* border: 1px solid pink; */
+}
+
+.w-pc-musics-screen-2>.screen-menubar>input{
+    outline: 0;
+    border: none;
+    margin-block: 4vh;
+    margin-inline: 3vw;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 30px;
+    padding-inline: 1.5vw;
+    padding-block: 0.5vh;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #343429;
+}   
+.w-pc-musics-screen-2>.screen-content{
+    padding-block: 7vh;
+}
+.w-pc-musics-screen-2>.screen-content>.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+}
+/* .w-pc-musics-screen-2>.screen-content>.wrapper>.card>*{
+    border: 0.5px yellow solid;
+} */
+.w-pc-musics-screen-2>.screen-content>.wrapper>.card{
+    height: 100%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75% 25%;
+}
+.w-pc-musics-screen-2>.screen-content>.wrapper>.card>.img{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.w-pc-musics-screen-2>.screen-content>.wrapper>.card>.img>img{
+    height: 100%;
+    border-radius: 9px;
+}
+.w-pc-musics-screen-2>.screen-content>.wrapper>.card>.texts {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    top: 70%;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+}
+.w-pc-musics-screen-2>.screen-content>.wrapper>.card>.texts>h4{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.w-pc-musics-screen-2>.screen-content>.wrapper>.card>.texts>p {
+    font-size: 13px
+}

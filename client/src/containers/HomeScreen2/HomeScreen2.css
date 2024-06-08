@@ -61,7 +61,7 @@
 }
 .w-pc-home-screen-2>.latest-news.onTimeOutAnimation{
     opacity: 100%;
-    transition: 1.5s ease;
+    transition: 1.3s ease;
 }
 .w-pc-home-screen-2>.latest-news>.div-img{
     /* border: 1px solid orange; */

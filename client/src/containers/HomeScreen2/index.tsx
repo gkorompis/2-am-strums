@@ -28,7 +28,7 @@ const HomeScreen2 = () =>{
                 setScreensOffset((prev:any)=>{return {...prev, isOffsetScreen2: true, bottom2, offset, top2, isOffset50Screen2: true}});
                 setTimeout(()=>{
                     setOnTimeOutAnimation(true)
-                },700)
+                },1000)
             } else {
                 setOnTimeOutAnimation(false)
             };
