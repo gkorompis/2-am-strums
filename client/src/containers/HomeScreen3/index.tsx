@@ -1,5 +1,4 @@
 import { iconApple, iconSpotify, iconYoutube } from "../../assets";
-import { Screen3Accessory } from "../../components";
 import globalStates from '../../utils/global';
 import { useContext } from "react";
 import "./HomeScreen3.css";
@@ -29,7 +28,7 @@ const HomeScreen3 = () =>{
                      <p>play on apple music</p>
                 </div>
             </div>
-            {windowWidthClass!=="w-mob"?<Screen3Accessory/>:null}
+            {/* {windowWidthClass!=="w-mob"?<Screen3Accessory/>:null} */}
         </div>
     )
 };

@@ -2,6 +2,7 @@ import "./AppNavbar.css";
 import globalStates from '../../utils/global';
 import { useContext, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
+import { iconClose } from "../../assets";
 
 const AppNavbar = () =>{
 
@@ -58,9 +59,15 @@ const AppNavbar = () =>{
                 
                    
                     <div className={`burger-collapsed ${isBurgerCollapsed ? "" : "slide-hide"}`}
-                    onClick={handleBurger}
+                    
                     >
-
+                            <img src={iconClose} alt={"close button"}  
+                                onClick={handleBurger}
+                            />
+                             <p onClick={()=>handleSwitchPage("/")}>home</p>
+                            <p onClick={()=>handleSwitchPage("musics")}>musics</p>
+                            <p onClick={()=>handleSwitchPage("/")}>stores</p>
+                            <p onClick={()=>handleSwitchPage("/")}>contacts</p>
                     </div>
                 
                

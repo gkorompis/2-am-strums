@@ -18,7 +18,7 @@
     padding: 0;
     margin: 0;
     margin-bottom: 10vh;
-    transition: 2s;
+    transition: 1.3s ease;
 }
 
 .w-pc-accessory-2>.wrapper>.worm-orange {
@@ -34,10 +34,16 @@
 .w-pc-accessory-2>.wrapper>.worm-1{
     top: 42vh;
     left: -32vw;
-    transform: rotate(-30deg) translate(-10vw, 0);
+    transform: rotate(-30deg) translate(-40vw, 0);
+}
+.w-pc-accessory-2>.wrapper>.worm-1.onSlideShowUp{
+    transform: rotate(-30deg) translate(-11vw, 0);
 }
 .w-pc-accessory-2>.wrapper>.worm-2 {
     top: 60vh;
     left: -32vw;
-    transform: rotate(-30deg);
+    transform: rotate(-30deg) translate(-20vw, 0);;
+}
+.w-pc-accessory-2>.wrapper>.worm-2.onSlideShowUp {
+    transform: rotate(-30deg) translate(1vw, 0);
 }

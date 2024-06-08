@@ -1,19 +1,22 @@
 import { Accessory1 } from "../../components";
 import "./HomeScreen1.css";
 import globalStates from '../../utils/global';
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 const HomeScreen1 = () =>{
     const context = globalStates && globalStates.globalContext;
     const globalContext:any = useContext(context);
     const windowWidthClass = globalContext && globalContext.windowWidthClass;
-    
-    
+    const [onTimeOutAnimation, setOnTimeOutAnimation] = useState(false);
 
     const screen1Ref = useRef(null) as any;
     
    
     useEffect(()=>{
+
+        setTimeout(()=>{
+            setOnTimeOutAnimation(true);
+        }, 500)
         
         const handleScroll = () =>{
             const setScreensOffset = globalContext && globalContext.setScreensOffset;
@@ -21,12 +24,18 @@ const HomeScreen1 = () =>{
             const top = screen1.top;
             const bottom = screen1.bottom;
             const offset = globalContext && globalContext.windowHeight;
-            setScreensOffset((prev:any)=>{return {...prev, isOffsetScreen1: false, bottom, offset, top}});
+
+            setScreensOffset((prev:any)=>{return {...prev, 
+                isOffsetScreen1: false, bottom, offset, top,
+                isOffset50Screen1: false
+            }});
             if(top < (-1*0.8*offset) && bottom < 0.1*offset ){
                 setScreensOffset((prev:any)=>{return {...prev, isOffsetScreen1: true, bottom, offset, top}});
             };
-            
-    }   ;
+             if(top < (-1*0.02*offset) ){
+                setScreensOffset((prev:any)=>{return {...prev, isOffsetScreen1: true, bottom, offset, top, isOffset50Screen1: true}});
+            };
+        };
         window.addEventListener('scroll', handleScroll);
         return () => {
         window.removeEventListener('scroll', handleScroll);
@@ -35,7 +44,9 @@ const HomeScreen1 = () =>{
     return(
         <>
             <div ref={screen1Ref} className={`${windowWidthClass}-home-screen-1`}>
-                <div className="wrapper">
+                <div className={`wrapper
+                        ${onTimeOutAnimation? "onTimeOutAnimation":""}
+                    `}>
                     <p>this is</p>
                     <h1>2 AM Strums</h1>
                 </div>

@@ -174,9 +174,27 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 25vh;
+    height: 27vh;
     background-color: #000000;
     transition: 0.5s;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px dashed #fff; */
+}
+.burger-collapsed>img {
+    height: 13px;
+    filter: invert(90%);
+    align-self: end;
+    padding-inline: 4.9vw;
+    padding-top: 0vh;
+    padding-bottom: 3vh;
+}
+.burger-collapsed>p{
+    margin-block: 5px;
 }
 .slide-hide{
     transform: translateY(-100%);

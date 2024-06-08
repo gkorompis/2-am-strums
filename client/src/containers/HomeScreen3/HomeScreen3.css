@@ -6,6 +6,7 @@
     box-sizing: border-box;
     position: relative;
     width: 100%;
+    padding-block: 8vh;
 }
 .w-pc-home-screen-3>.screen{
     width: 100%;
@@ -18,7 +19,7 @@
     padding-left: 2vw;
     height: 40%;
     z-index: 2;
-    color: #343429;
+    text-align: center;
 }
 .w-pc-home-screen-3>.screen-title>p{
     font-weight: 600;

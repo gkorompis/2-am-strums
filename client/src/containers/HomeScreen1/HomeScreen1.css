@@ -31,12 +31,24 @@
     letter-spacing: 1px;
     font-size: 10vh;
     font-weight: 500;
+    transition: 1.5s ease;
+    opacity: 0%;
 }
 .w-pc-home-screen-1>.wrapper>h1{
     letter-spacing: 5px;
     font-size: 20vh;
     z-index: 5;
     text-align: center;
+    transition: 1.5s ease;
+    opacity: 0%;
+}
+.w-pc-home-screen-1>.wrapper.onTimeOutAnimation>h1 {
+    opacity: 100%;
+    /* font-size: 20vh; */
+}
+.w-pc-home-screen-1>.wrapper.onTimeOutAnimation>p {
+    opacity: 100%;
+    /* font-size: 10vh; */
 }
 
 /* mobile */
